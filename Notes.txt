@@ -1,0 +1,23 @@
+#Credencials
+tcp://0.tcp.ngrok.io:10722
+http://6.tcp.ngrok.io:17062/
+User: pi
+Password: raspberrypiASO
+ssh pi@4.tcp.ngrok.io -p 11518
+edu
+Eduard2793
+
+#Eliminar usuaris.
+userdel [USERNAME]
+#Comanda per afegir usuaris.
+useradd [USERNAME]
+#Set password.
+passwd [USERNAME]
+
+#Apache2
+/etc/apache2
+Permisos para los directorios y ficheros /var/www
+/etc/apache2/mods-available se encuentran los modulos disponibles para el servidor Apache 
+En el directorio /etc/apache2/mods-enabled se enucentran los soft links que apuntan a mods-available.
+El modulo cgi.load permite la ejecución de los scripts en la maquina para mostrar el output en la interfaz web.
+

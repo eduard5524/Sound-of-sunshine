@@ -1,0 +1,85 @@
+.charts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-chart {
+  height: 500px;
+}
+
+.charts > .single-chart > div {
+  color: white;
+  margin-top: 10px;
+  font-size: 37px;
+  text-shadow: 3px 3px black;
+  font-weight: bold;
+}
+
+.smaller-charts > div:first-child {
+  margin-bottom: 20px;
+  margin-left: -275%;
+}
+
+.charts > .smaller-charts .single-chart > div {
+  color: white;
+  font-size: 27px;
+  text-shadow: 3px 3px black;
+  font-weight: bold;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+}
+
+.small-chart {
+  height: 200px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.purple .circle {
+  stroke: #1edf53;
+}
+
+.circular-chart.yellow .circle {
+  stroke: #ff8b38;
+}
+
+.circular-chart.blue .circle {
+  stroke: var(--blue);
+}
+
+.percentage {
+  fill: white;
+  text-shadow: 4px 4px black;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
