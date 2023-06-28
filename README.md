@@ -1,12 +1,12 @@
-#Como hacer funcionar la práctica:
+# Sound of Sunshine
 
-Esta práctica funciona sobre el servidor web Apache
+## General Information
+- The application runs on the Apache Web Server. The web server folder is located in `/var/www/`
 
-La carpeta `webserver` debe ir dentro del directorio `/var/www/`
+## Run
+- The following Apache Modules should be activated: `cgi.load`, `session.load`, `session_cookie.load`
 
-Módulos Apache que se deben activar: `cgi.load`, `session.load`, `session_cookie.load`
-
-Añadir fichero `webserver.conf` en `/etc/apache2/sites-enabled/` con el siguiente contenido:
+- Add the file `webserver.conf` in `/etc/apache2/sites-enabled/` with the following content:
 
 ```
 <VirtualHost *:80>
@@ -31,9 +31,8 @@ Añadir fichero `webserver.conf` en `/etc/apache2/sites-enabled/` con el siguien
 </VirtualHost>
 ```
 
-Hacer un restart del servicio Apache
-
-Añadir estas líneas al fichero `/etc/rsyslog.conf`:
+- Restart the Apache service.
+- Add the following lines to the file `/etc/rsyslog.conf`:
 
 ```
 #
@@ -43,8 +42,8 @@ $template aso, "<%timestamp%> <%syslogpriority-text%>%msg%\n"
 local0.*	/var/log/aso.log;aso
 ```
 
-Crear fichero `aso.log` en `/var/log/aso.log`
+- Create the file `aso.log` en `/var/log/aso.log`.
 
-Hacer un restart del servicio `rsyslog`
+- Restart the service `rsyslog`.
 
-Para iniciar el LKM, acceder al directorio `led-handler-LKM` y ejecutar `make install`
+- To start LKM access the directory `led-handler-LKM` and execute `make install`.
